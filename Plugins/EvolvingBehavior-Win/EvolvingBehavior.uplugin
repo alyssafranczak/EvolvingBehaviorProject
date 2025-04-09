@@ -1,0 +1,35 @@
+{
+	"FileVersion": 3,
+	"Version": 2,
+	"VersionName": "0.2.0",
+	"FriendlyName": "EvolvingBehavior",
+	"Description": "A plugin for evolving Behavior Trees in Unreal Engine.",
+	"Category": "AI",
+	"CreatedBy": "NPCDev",
+	"CreatedByURL": "https://npc.codes",
+	"DocsURL": "https://evolvingbehavior.npc.codes/manual",
+	"MarketplaceURL": "",
+	"SupportURL": "https://evolvingbehavior.npc.codes",
+	"EngineVersion": "4.27.0",
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "EvolvingBehavior",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"BlacklistPlatforms": [
+				"IOS",
+				"TVOS",
+				"Android",
+				"HoloLens",
+				"Lumin"
+			],
+			"AdditionalDependencies": [
+				"Engine",
+				"CoreUObject"
+			]
+		}
+	]
+}
