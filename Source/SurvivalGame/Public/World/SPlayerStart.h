@@ -19,6 +19,8 @@ class SURVIVALGAME_API ASPlayerStart : public APlayerStart
 	UPROPERTY(EditAnywhere, Category = "PlayerStart")
 	bool bPlayerOnly;
 
+	bool bAlreadySpawned;
+
 public:
 
 	bool GetIsPlayerOnly() { return bPlayerOnly; }

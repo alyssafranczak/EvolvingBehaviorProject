@@ -11,4 +11,5 @@ ASPlayerStart::ASPlayerStart(const class FObjectInitializer& ObjectInitializer)
 : Super(ObjectInitializer)
 {
 	bPlayerOnly = true;
+	bAlreadySpawned = false;
 }

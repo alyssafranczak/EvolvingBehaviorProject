@@ -242,7 +242,21 @@ bool ASGameMode::IsSpawnpointAllowed(APlayerStart* SpawnPoint, AController* Cont
 		return MyPlayerStart->GetIsPlayerOnly() && !Controller->PlayerState->IsABot();
 	}
 
-	/* Cast failed, Anyone can spawn at the base playerstart class */
+	/* Check if controller pawn's tag matches the tag of the PlayerStart*/
+	// return Controller->ActorHasTag(SpawnPoint->PlayerStartTag);
+
+	if (Controller->GetPawn()) {
+		UE_LOG(LogTemp, Warning, TEXT("Pawn class: %s"), *Controller->GetPawn()->GetClass()->GetName());
+		if (Controller->GetPawn()->ActorHasTag(SpawnPoint->PlayerStartTag)) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+
+	///* Cast failed, Anyone can spawn at the base playerstart class */
 	return true;
 }
 
